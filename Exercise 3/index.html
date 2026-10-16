@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A resilient data feed with a four-state lifecycle and skeleton loading feedback."
+    />
+    <title>Resilient State Machine</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./state-machine.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="page-header">
+        <p class="eyebrow">EXERCISE 3</p>
+        <h1>Resilient State Machine</h1>
+        <p class="subtitle">
+          A reliable data feed with skeleton loading and retry support.
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="feed-heading">
+        <div class="panel-header">
+          <div>
+            <h2 id="feed-heading">Data Feed</h2>
+            <p class="panel-description">
+              Test the IDLE, LOADING, SUCCESS, and ERROR states.
+            </p>
+          </div>
+
+          <span class="status-badge">
+            Status: <strong id="status">IDLE</strong>
+          </span>
+        </div>
+
+        <div id="feed" aria-live="polite" aria-busy="false">
+          <p class="message">Ready to load data.</p>
+        </div>
+
+        <div class="panel-actions">
+          <button id="load-button" type="button">Load Data</button>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        <p>Exercise 3 · Reactive UI · Async State Management</p>
+      </footer>
+    </main>
+  </body>
+</html>
