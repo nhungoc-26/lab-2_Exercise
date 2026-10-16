@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 2 - Reactive Task Manager</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f1f5f9;
+        color: #1e293b;
+        max-width: 750px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      .task-card {
+        background: white;
+        padding: 28px;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px #00000010;
+      }
+
+      .add-row {
+        display: flex;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      input {
+        flex: 1;
+        min-width: 0;
+        padding: 12px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+      }
+
+      button {
+        padding: 9px 12px;
+        margin: 3px;
+        cursor: pointer;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        background: white;
+      }
+
+      button:hover {
+        background: #e0e7ff;
+      }
+
+      .filters {
+        margin-bottom: 15px;
+      }
+
+      .task-list {
+        padding-left: 20px;
+      }
+
+      .task-list li {
+        padding: 12px 0;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .done span {
+        text-decoration: line-through;
+        color: #94a3b8;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 20px;
+        color: #64748b;
+        font-size: 14px;
+      }
+      .audit-card {
+        background: white;
+        margin-top: 20px;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 18px #00000010;
+      }
+
+      #audit-results li {
+        margin: 10px 0;
+        padding: 8px;
+        background: #f1f5f9;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <section class="audit-card">
+      <h2>Checkpoint 2 Audit</h2>
+      <p>Kiểm tra state update và event delegation.</p>
+
+      <button id="run-audit" type="button">Run Audit</button>
+
+      <ul id="audit-results"></ul>
+    </section>
+
+    <script type="module" src="./task-app.js"></script>
+    <script type="module" src="./checkpoint2-verify.js"></script>
+  </body>
+</html>
